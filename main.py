@@ -13,8 +13,34 @@ class KBTest(unittest.TestCase):
         for item in data:
             if isinstance(item, Fact):
                 self.KB.kb_assert(item)
-        
 
+    """
+    def test12(self):
+        ask1 = read.parse_input("fact: (possesses Ai Loot)")
+        print(' Asking if', ask1)
+        answer = self.KB.kb_ask(ask1)
+        self.assertEqual(answer[0].bindings, [])
+
+    def test22(self):
+        ask1 = read.parse_input("fact: (inst Nosliw Wizard)")
+        print(' Asking if', ask1)
+        answer = self.KB.kb_ask(ask1)
+        self.assertFalse(answer)
+
+    def test32(self):
+        ask1 = read.parse_input("fact: (inst Sarorah Sorceress)")
+        print(' Asking if', ask1)
+        answer = self.KB.kb_ask(ask1)
+        self.assertEqual(answer[0].bindings, [])
+
+    def test42(self):
+        ask1 = read.parse_input("fact: (inst Sarorah Wizard)")
+        print(' Asking if', ask1)
+        answer = self.KB.kb_ask(ask1)
+        self.assertEqual(answer[0].bindings, [])
+
+
+    """
     def test1(self):
         ask1 = read.parse_input("fact: (color bigbox red)")
         print(' Asking if', ask1)
